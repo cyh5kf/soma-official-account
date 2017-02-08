@@ -1,0 +1,125 @@
+/*login style*/
+.login-bg{
+    height: 100vh;
+    /*background: url(../../static/images/login/login_bg.jpg);*/
+    background-size: 100% 100%;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+
+    display: -moz-box;
+    -moz-box-orient: horizontal;
+    -moz-box-pack: center;
+    -moz-box-align: center;
+
+    display: -o-box;
+    -o-box-orient: horizontal;
+    -o-box-pack: center;
+    -o-box-align: center;
+
+    display: -ms-box;
+    -ms-box-orient: horizontal;
+    -ms-box-pack: center;
+    -ms-box-align: center;
+
+    display: box;
+    box-orient: horizontal;
+    box-pack: center;
+    box-align: center;
+}
+#login{
+    width: 330px;
+    min-height: 400px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    overflow: hidden;
+}
+#login h3{
+    font-size: 1.7rem;
+    font-weight: bolder;
+    text-align: center;
+    padding: 14px 0 24px;
+    color:#000;
+}
+#login #signin-enable{
+    background: #0092d0;
+    color: #fff;
+    display: block;
+    text-align: center;
+    width: 250px;
+    font-size: 1.6rem;
+    line-height: 30px;
+    margin: 20px auto 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    padding: 8px 0;
+    cursor: pointer;
+}
+#login #signin-enable:hover{
+    background: #058cc5;
+    text-decoration: none;
+}
+#login #signin-disable{
+    background: #d1d1d1;
+    color: #f6f6f6;
+    display: block;
+    text-align: center;
+    width: 250px;
+    font-size: 1.6rem;
+    line-height: 30px;
+    margin: 20px auto 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    padding: 8px 0;
+    cursor: not-allowed;
+}
+#login #signin-disable:hover{
+    background: #d1d1d1;
+    text-decoration: none;
+}
+#login input{
+    border: solid 1px #d1d1d1;
+    line-height: 30px;
+    font-size: 1.3rem;
+    display: block;
+    margin: 0 auto 11px;
+    width: 240px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    padding-left: 10px;
+}
+.logo{
+    width: 70px;
+    height: 70px;
+    margin: 40px auto 0;
+    background: url(../../static/images/login/login_logo.png) no-repeat;
+    background-size: 70px 70px;
+}
+.login-mes{
+}
+.login-mes p{
+    font-size: 1.2rem;
+    width: 250px;
+    margin: 0 auto 10px;
+    color: #808080;
+}
+.login-mes .error{
+    color: #ff2121;
+    font-weight: bolder;
+}
+.login-bg .copyright{
+    width: 9rem;
+    font-size: 1.3rem;
+    color: #585858;
+    margin-left:-4.5rem;
+    position: absolute;
+    bottom:30px;
+    left:50%;
+}

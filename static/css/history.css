@@ -1,0 +1,508 @@
+/*history style*/
+#main{
+    display: block;
+}
+.his-header{
+    border-bottom: solid 1px #e5e5e5;
+    height:55px;
+    background: #fafafa;
+}
+.his-header h2{
+    display: inline-block;
+    padding: 19px 20px;
+    font-size: 1.5rem;
+}
+.his-header span{
+    font-size: 1.4rem;
+    display: inline-block;
+    border-left: solid 1px #e5e5e5;
+    color: #797b7d;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+
+.empty_result_note{
+    position: relative;
+    top: 40%;
+    color: #797b7d;
+    font-size: 1.5rem;
+    z-index: 0;
+    text-align: center;
+}
+
+.his-list-box{
+    margin:0 35px;
+}
+.his-list{
+    font-size: 1.4rem;
+    width: 100%;
+}
+
+.his-list thead tr{
+    height: 50px;
+}
+.his-list thead td{
+    border-bottom: 1px solid #e5e5e5;
+    color: #797b7d;
+    line-height: 20px;
+    padding-left: 10px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    white-space:nowrap; /* 不换行 */
+    font-size: 1.4rem;
+}
+
+.his-list td{
+    text-align: left;
+}
+.his-list tbody td{
+    cursor: pointer;
+    border-bottom: solid 1px #ebebeb;
+    height: 56px;
+    padding-left: 10px;
+}
+.his-list tbody tr:hover{
+    background: #f2f2f2;
+}
+.his-list img{
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.his-list tr span{
+    font-weight: bolder;
+}
+
+.his-list tr span.spanInMsgNum{
+    font-weight: normal;
+    padding-right:12px;
+    display:-moz-inline-box;
+    display:inline-block;
+    width: 40px;
+}
+
+.his-list tr span.spanOutMsgNum{
+    font-weight: normal;
+}
+
+ .msgIn{
+    display: inline-block;
+    width: 9px;
+    height: 11px;
+    background: url(../images/common/icon_message_in.png) no-repeat;
+    padding-right:5px;
+}
+
+.msgOut{
+    display: inline-block;
+    width: 9px;
+    height: 11px;
+    background: url(../images/common/icon_message_out.png) no-repeat;
+    padding-right:5px;
+}
+
+.avatar-1{
+    width: 33px;
+    height: 33px;
+}
+.avatar-2{
+    width: 30px;
+    height: 30px;
+}
+.his-filter{
+    background: #f4f4f4;
+    border-bottom: solid 1px #e5e5e5;
+    padding: 15px 20px;
+    height: 30px;
+}
+.his-filter button, .his-filter input, .his-filter .export{
+    display: inline-block;
+    border: solid 1px #d1d1d1;
+    height: 30px;
+    font-size: 1.4rem;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.his-filter input{
+    border:1px solid #e5e5e5;    
+}
+.his-filter input.groupchb{
+    margin-left: 20px;
+    margin-right: 8px;
+}
+.his-filter .dropdown{
+    display: inline-block;
+    padding-right: 12px;
+}
+.dropdown{
+    position: relative;
+}
+.dropdown button{
+    background: #fff;
+    width: 210px;
+    position: relative;
+    text-align: left;
+    font-size: 1.4rem;
+}
+
+button.time{
+    color: #fff;
+    width: 160px;
+    height: 32px;
+    border: 0;
+    position: relative;
+    background: url(../images/common/drop-dow_white.png) #007aff no-repeat;
+    background-size: 10px 6px;
+    background-position: 140px 12px;
+    text-align: center;
+    margin-right: 0;
+
+    overflow:hidden;    /* 内容超出宽度时隐藏超出部分的内容 */
+    text-overflow:ellipsis; /* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/
+    white-space:nowrap; /* 不换行 */
+}
+
+.dropdown button.btnCsSelect{
+    width: 210px;
+    height: 32px;
+    margin-right: 0;
+}
+
+.dropdown #labelSelect:hover{
+    cursor: pointer;
+}
+
+.dropdown #labelSelect{
+    width:155px;
+    display:block;
+    padding-left:5px;
+    overflow:hidden;    /* 内容超出宽度时隐藏超出部分的内容 */
+    text-overflow:ellipsis; /* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/
+    white-space:nowrap; /* 不换行 */
+}
+
+.dropdown .caret{
+    width: 30px;
+    height: 31px;
+    position: absolute;
+    right: 0;
+    top: -1px;
+    background: #fafafa;
+    background: url(../../static/images/common/drop-down_gray.png) no-repeat center;
+    background-size: 10px 6px;
+    border-left: solid 1px #d1d1d1;
+}
+.dropdown ul{
+/*    position: absolute;
+    border: solid 1px #ccc;
+    background: #fff;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;*/
+    /*width: 163px;*/
+    max-height: 270px;
+    overflow-y: auto;
+    /*display: none;*/
+}
+.dropdown ul div{
+    text-align: center;
+    padding: 10px;
+}
+.dropdown ul button{
+    width: 90px;
+    color: #fff;
+    background: #007aff;
+    border: 0;
+    text-align: center;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+.dropdown-container li{
+    border-bottom: solid 1px #ebebeb;
+    height: 32px;
+}
+
+/*这个时候选择，hover高度怎么总是37？*/
+.dropdown-container#time_container li{
+    border-bottom: solid 1px #ebebeb;
+    height: 37px;
+}
+
+.dropdown li:hover{
+    background: #f2f2f2;
+}
+.dropdown a{
+    padding: 3px 20px;
+    font-size: 1.4rem;
+    line-height: 32px;
+    color: #000;
+    display: block;
+}
+.dropdown a:hover{
+    color: #000;
+    background: #f5f5f5;
+    text-decoration: none;
+}
+.his-filter input{
+    width: 280px;
+    padding-left: 10px;
+}
+
+.his-filter #div_category{
+    padding-right: 12px;
+}
+
+.his-filter .searchBox{
+    display: inline-block;
+    position: relative;
+    padding:0 0 0 0;
+    margin-left: -14px;
+}
+
+.searchBox .searchit{
+    display: inline-block;
+    width:14px;
+    height:14px;
+    background: url('../images/broadcast/searchit.png') no-repeat 0 0;
+    position: relative;
+    left:25px;
+    top:5px;
+}
+
+.searchBox .searchInput{
+    width:180px;
+    height:30px;
+    padding:0 6px 0 30px;
+    border:1px solid #dedee1;
+    border-radius:3px;
+    background: #fff;
+    font-size: 1.4rem;    
+    color:#000;    
+}
+
+.his-footer{
+    /*width: 100%;*/
+    text-align: center;
+    font-size: 1.4rem;
+    color: #007aff;
+    padding: 20px 0;
+}
+.his-footer a{
+    cursor: pointer;
+}
+#time_container{
+    width: 158px;
+}
+#category_container{
+    width:207px;
+}
+
+.dropdown-container{
+    width: 195px;
+    position: absolute;
+    max-height: 339px;
+    background: #fff;
+    border-radius: 3px;
+    border: 1px solid #eaedf1;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    z-index: 1;
+    display: none;
+}
+.dropdown-container a.all{
+}
+.dropdown-container ul{
+    position: static;
+    border: 0;
+    overflow-y: auto;
+}
+
+.dropdown-container  li.selectAll{
+    height: 40px;
+}
+
+.dropdown-container li a{
+    font-size: 1.4rem;
+    padding-left: 20px;
+    line-height: 32px;
+    cursor: pointer;
+    overflow:hidden;    /* 内容超出宽度时隐藏超出部分的内容 */
+    text-overflow:ellipsis; /* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/
+    white-space:nowrap; /* 不换行 */
+}
+
+.dropdown-container input{
+    width: auto;
+}
+.dropdown-container label{
+     width: 170px;
+     font-size: 1.4rem;
+     padding-left: 20px;
+     line-height: 30px;
+     cursor: pointer;
+     overflow:hidden;    /* 内容超出宽度时隐藏超出部分的内容 */
+     text-overflow:ellipsis; /* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/
+     white-space:nowrap; /* 不换行 */
+ }
+
+.dropdown-container label.group_lab{
+    width: 190px;
+    padding-left: 0px;
+}
+
+.dropdown-container li#li-cs{
+    background: #fafafa;
+}
+.dropdown li#li-cs:hover{
+    background: #f2f2f2;
+}
+
+.dropdown-container label.chb{
+    width: 150px;
+    padding-left: 33px;
+}
+.dropdown-container button{
+    width: 90px;
+    background: #007aff;
+    color: #fff;
+    text-align: center;
+    border: 0;
+    display: block;
+    margin: 19px auto;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+}
+
+.dropdown-container  .csSelectSave{
+
+    width: 167px;
+    height:30px;
+    background: #007aff;
+    color: #fff;
+    font-size: 1.4rem;
+    text-align: center;
+    border: 0;
+    display: block;
+    margin: 19px auto;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+}
+
+.dropdown-container label.group_lab{
+    display: inline-block;
+    width: 150px;
+ }
+
+#group_title{
+     cursor: pointer;
+ }
+
+#group_title.isHidden{
+    background: url(../../static/images/common/arrow_up.png) no-repeat 175px;
+}
+#group_title.isHidden:hover{
+    background: url(../../static/images/common/arrow_up.png) no-repeat 175px #f2f2f2;
+}
+
+#group_title.isShow{
+    background: url(../../static/images/common/arrow_down.png) no-repeat 175px;
+}
+#group_title.isShow:hover{
+    background: url(../../static/images/common/arrow_down.png) no-repeat 175px #f2f2f2;
+}
+
+.cschb{
+    display: inline-block;
+}
+.chb{
+    display: inline-block;
+}
+.csInfoEx{
+     display: inline-block;
+ }
+
+.his-filter a.export{
+    float:right;
+    width: 124px;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    color: #007aff;
+    background: #fff;
+    cursor: pointer;
+    text-align: center;
+    margin:0;
+    border: solid 1px #d1d1d1;
+}
+a.export i{
+    display: inline-block;
+    width: 15px;
+    height: 16px;
+    background: url(../images/common/export_date_icon.png) no-repeat;
+    display: inline-block;
+    background-size: 15px 16px;
+    margin:0 5px 0 0;
+    margin: 7px 5px 0 0;
+    vertical-align: top;
+}
+a.export span{
+
+}
+
+
+#history-detail-wrapper{
+    position: fixed;
+    top:0;
+    right: 0;
+    width: 70%;
+    height:100%;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+#history-detail-wrapper .chatting-holder{
+    margin-left: 0;
+    border-left: 1px solid #ccc;
+}
+
+#history-detail-wrapper .chatting-setting-close-btn{
+    right: -75px;
+}
+
+.chatting-holder-body .load-following {
+    border-width: 1px 0 0;
+    border-top-color: #f4f4f4;
+    border-style: solid;
+    min-height: 35px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #fafafa;
+}
+
+.chatting-holder-body .load-following .load-more-btn {
+    display: block;
+    margin: auto;
+    font-size: 13px;
+    line-height: 1pc;
+    color: #007aff;
+    cursor: pointer;
+}
+
+.chatting-setting .chatting-setting-close{
+    display: block;
+    position: relative;
+    left: -1px;
+    height: 70px;
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+}
